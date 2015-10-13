@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thesis Filter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- JQuery & JScript -->
+    <script type="text/javascript" src='/static/scripts/jquery-2.1.4.min.js' defer></script>
+    <script type="text/javascript" src='/static/bootstrap/js/bootstrap.min.js' defer></script>
+    <script type="text/javascript" src='/static/scripts/script.js' defer></script>
+</head>
+<body>
+
+<div class="container">
+    <form class="form-horizontal" method="post">
+    <div class="form-group">
+        <label for="selection">Filter By:</label>
+        <select id="selection" name="selection" class="form-control">
+            <option value="all">All</option>
+            <option value="adviser">Adviser</option>
+            <option value="university">University</option>
+            <option value="2011">Year 2011</option>
+            <option value="2012">Year 2012</option>
+            <option value="2013">Year 2013</option>
+            <option value="2014">Year 2014</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="container">
+  <h2>Filter Thesis for {{ selected }}: </h2><h1 class="sr-only" id="selected">{{ selected }}</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
